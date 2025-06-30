@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  cursor: none;
+}
+
+span {
+  background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 6s linear, spin 6s linear;
+  box-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  animation: fadein 3s ease-in-out;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
